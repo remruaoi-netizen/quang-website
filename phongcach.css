@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+/* Khung tổng */
+#khung {
+  width: 1000px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Phần đầu */
+.dau {
+  width: 100%;
+}
+
+/* Logo + hình bên phải */
+.topdau {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo img {
+  width: 200px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.topdau-benphai img {
+  border-radius: 5px;
+}
+
+/* Menu */
+.menu {
+  background-color: #ceecf0;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.menu a {
+  color: rgb(255, 2, 23);
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 25px;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: rgb(255, 0, 0);
+}
+
+/* Banner */
+.banner img {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Nội dung sản phẩm */
+.noidung {
+  padding: 20px;
+}
+
+
+.sanphamnoibat2 {
+  text-align: center;
+  background: #c504ff;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  padding: 10px 0;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.trungbay-sanphmnoibat {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.khungtrungbay {
+  width: 220px;
+  border: 1px solid #ff0015; /* khung trưng bày */
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  transition: 0.3s;
+  box-shadow: 0 0 5px rgba(226, 4, 4, 0.1);
+}
+
+.khungtrungbay:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(245, 7, 7, 0.2);
+}
+
+.khungtrungbay img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.khungtrungbay span {
+  display: block;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.chitiet {
+  background: #02ffb3; /* chi tiết dưới sản phẩm  */
+  color: rgb(214, 120, 243);
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.chitiet:hover {
+  background: #e477c3;
+}
+
+/* --- Hiển thị giá tiền sản phẩm --- */
+.khungtrungbay .gia {
+  color: #e53935;          /* Màu đỏ nổi bật */
+  font-weight: bold;
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+/* --- Trang giới thiệu --- */
+.tranggioithieu {
+  padding: 20px;
+  text-align: justify;
+}
+
+.tranggioithieu h2 {
+  color: #ff0000;
+  margin-bottom: 15px;
+}
+
+/* --- Trang liên hệ --- */
+.lienhe {
+  padding: 20px;
+}
+
+.lienhe h2 {
+  color: #ff0505;
+  margin-bottom: 15px;
+}
+
+.lienhe form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.lienhe input, .lienhe textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.lienhe button {
+  background: #1fa73e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.lienhe button:hover {
+  background: #14842b;
+}
+
+/* Nút active */
+.menu a.active {
+  color: yellow;
+}
+/* ----- Dòng chữ chuyển động bập bênh ----- */
+.logo-chuyen-dong {
+  position: fixed;       /* Giữ cố định 1 góc */
+  top: 20px;             /* Cách trên 20px */
+  left: 190px;            /* Cách trái 30px */
+  font-size: 28px;
+  font-weight: bold;
+  color: red;        
+  font-family: 'Arial Black', sans-serif;
+  letter-spacing: 2px;
+  text-shadow: 
+    0 0 5px #ffb300,          /* Vàng sáng */
+    0 0 10px #ffb300,
+    0 0 20px #ff8f00,
+    0 0 40px #ff6f00;          /* Hiệu ứng glow */
+  animation: 
+    bapbenh 2s infinite ease-in-out,
+    phatsang 2s infinite alternate;
+}
+
+/* ----- Hiệu ứng bập bênh ----- */
+@keyframes bapbenh {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(5deg); }
+  50%  { transform: rotate(0deg); }
+  75%  { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* ----- Hiệu ứng phát sáng nhấp nháy ----- */
+@keyframes phatsang {
+  0% {
+    text-shadow: 
+      0 0 5px #ffb300,
+      0 0 10px #ffb300,
+      0 0 20px #ff8f00,
+      0 0 40px #ff6f00;
+  }
+  50% {
+    text-shadow: 
+      0 0 10px #ffd54f,
+      0 0 20px #ffb300,
+      0 0 40px #ff8f00,
+      0 0 80px #ff6f00;
+  }
+  100% {
+    text-shadow: 
+      0 0 5px #ffb300,
+      0 0 10px #ffb300,
+      0 0 20px #ff8f00,
+      0 0 40px #ff6f00;
+  }
+}
+/* ----- Hiệu ứng bập bênh ----- */
+@keyframes bapbenh {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(5deg); }
+  50%  { transform: rotate(0deg); }
+  75%  { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+body {
+  font-family: "Playwrite DE Grund Guides", cursive;
+}
+
+
+
+
